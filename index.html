@@ -25,8 +25,19 @@
     #wheel-canvas.spinning { transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99); }
     .frost { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
     /* Logo positioning above the first letter of the title */
-    .title-wrap { position: relative; display: inline-block; }
-    #logo-2 { position: absolute; left: 0; top: -48px; transform-origin: left top; transform: scale(0.5); z-index: 30; }
+    .title-wrap { position: relative; display: inline-block; overflow: visible; }
+#logo-2 {
+  position: absolute;
+  left: 8px;
+  top: -40px;
+  width: 120px;
+  height: auto;
+  transform-origin: left top;
+  transform: scale(1);
+  z-index: 30;
+  display: block;
+  pointer-events: none;
+}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" type="text/javascript" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script>
