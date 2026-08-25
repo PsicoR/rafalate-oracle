@@ -26,23 +26,12 @@
     .frost { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
     /* Logo positioning above the first letter of the title */
     .title-wrap {
-  position: relative;
-  display: inline-block;
-  overflow: visible;
-  padding-top: 16px; /* desplaza el título hacia abajo para que no lo cubra la imagen */
+  position: relative; display: inline-block; overflow: visible; padding-top: 16px;
 }
 
 #logo-2 {
-  position: absolute;
-  left: 8px;
-  top: -40px;
-  width: 120px;
-  height: auto;
-  transform-origin: left top;
-  transform: scale(1);
-  z-index: 30;
-  display: block;
-  pointer-events: none;
+  position: absolute; left: 8px; top: -40px; width: 120px; height: auto;
+  transform-origin: left top; transform: scale(1); z-index: 30; display: block; pointer-events: none;
 }
 h1 { margin-top: 20px; }
   </style>
@@ -65,7 +54,7 @@ h1 { margin-top: 20px; }
       <!-- Added wrapper to position logo_2.png above the first letter (C) of the title -->
       <div class="title-wrap">
         <img id="logo-2" src="logo_2.png" alt="logo_2">
-        <h1 data-template-id="page-title" class="canva-text" style="color: rgb(139, 39, 75, 1); font-weight: 720; font-style: normal; font-size: 99px; letter-spacing: -0.124rem; line-hight: 1.2;">Confirma lo que ya sabes...</p>
+        <h1 data-template-id="page-title" class="canva-text" style="color: rgb(139, 39, 75, 1); font-weight: 720; font-style: normal; font-size: 99px; letter-spacing: -0.124rem; line-height: 0.9;">Confirma lo que ya sabes...</p>
       </div>
       <p data-template-id="page-subtitle" class="canva-text mt-3" style="color: rgb(129, 42, 52, 1); font-weight: 400; font-style: normal; font-size: 36px;">Piensa, desea... ¡respira!</p>
      </header>
@@ -74,9 +63,9 @@ h1 { margin-top: 20px; }
      <div class="relative">
       <div class="absolute top-[-24px] left-1/2 -translate-x-1/2 z-20 w-0 h-0" style="border-left:12px solid transparent;border-right:12px solid transparent;border-top:18px solid #ffffff;"></div>
       <canvas id="wheel-canvas" width="840" height="840" class="rounded-full" style="width:min(420px,100vw);height:min(420px,100vw);"></canvas>
-     </div><button data-template-id="spin-button" id="spin-btn" class="canva-button rounded-full px-10 py-3 font-bold shadow-lg hover:scale-105 active:scale-95 transition-transform mt-6" style="backgr[...]
+     </div><button data-template-id="spin-button" id="spin-btn" class="canva-button rounded-full px-10 py-3 font-bold shadow-lg hover:scale-105 active:scale-95 transition-transform mt-6" style="background: rgb(212, 106, 154, 1); color: rgb(240, 242, 245, 1);">
      Girar</button>
-     <div data-template-id="result-section" id="result-area" class="canva-section w-full rounded-2xl p-6 text-center hidden relative overflow-hidden frost" style="background: rgba(255, 255, 255, 0.08)[...]
+     <div data-template-id="result-section" id="result-area" class="canva-section w-full rounded-2xl p-6 text-center hidden relative overflow-hidden frost" style="background: rgba(255, 255, 255, 0.08);">
       <p data-template-id="result-label" class="canva-text" style="color: rgb(240, 242, 245); font-weight: 400; font-style: normal; font-size: 18px;">Confía:</p>
       <p data-template-id="result-value" class="canva-text mt-2" style="color: rgb(5, 5, 5); font-weight: 800; font-size: 32px;"></p>
      </div>
