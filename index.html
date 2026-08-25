@@ -24,6 +24,9 @@
     #wheel-canvas { transition: transform 0s; }
     #wheel-canvas.spinning { transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99); }
     .frost { background: rgba(255,255,255,0.08); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    /* Logo positioning above the first letter of the title */
+    .title-wrap { position: relative; display: inline-block; }
+    #logo-2 { position: absolute; left: 0; top: -48px; transform-origin: left top; transform: scale(0.5); z-index: 30; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" type="text/javascript" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script>
@@ -40,8 +43,12 @@
   <main class="relative z-10 w-full max-w-5xl mx-auto px-6 py-28">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"><!-- Left Column: Header -->
     <div class="flex flex-col gap-6">
-     <header>     
-      <h1 data-template-id="page-title" class="canva-text" style="color: rgb(139, 39, 75, 1); font-weight: 800; font-style: normal; font-size: 107px; letter-spacing: -0.124rem;">Confirma lo que ya sabes</h1>
+     <header>
+      <!-- Added wrapper to position logo_2.png above the first letter (C) of the title -->
+      <div class="title-wrap">
+        <img id="logo-2" src="logo_2.png" alt="logo_2">
+        <h1 data-template-id="page-title" class="canva-text" style="color: rgb(139, 39, 75, 1); font-weight: 800; font-style: normal; font-size: 107px; letter-spacing: -0.124rem;">Confirma lo que ya sabes</h1>
+      </div>
       <p data-template-id="page-subtitle" class="canva-text mt-3" style="color: rgb(129, 42, 52, 1); font-weight: 400; font-style: normal; font-size: 36px;">Piensa, desea... ¡respira!</p>
      </header>
     </div><!-- Right Column: Wheel + Spin + Result -->
@@ -49,7 +56,7 @@
      <div class="relative">
       <div class="absolute top-[-24px] left-1/2 -translate-x-1/2 z-20 w-0 h-0" style="border-left:12px solid transparent;border-right:12px solid transparent;border-top:18px solid #ffffff;"></div>
       <canvas id="wheel-canvas" width="840" height="840" class="rounded-full" style="width:min(420px,100vw);height:min(420px,100vw);"></canvas>
-     </div><button data-template-id="spin-button" id="spin-btn" class="canva-button rounded-full px-10 py-3 font-bold shadow-lg hover:scale-105 active:scale-95 transition-transform mt-6" style="background: rgb(139, 39, 75, 1); color: #fff;">
+     </div><button data-template-id="spin-button" id="spin-btn" class="canva-button rounded-full px-10 py-3 font-bold shadow-lg hover:scale-105 active:scale-95 transition-transform mt-6" style="background: #ffffff; color: #5a2b2b;">
      Girar</button>
      <div data-template-id="result-section" id="result-area" class="canva-section w-full rounded-2xl p-6 text-center hidden relative overflow-hidden frost" style="background: rgba(255, 255, 255, 0.08);">
       <p data-template-id="result-label" class="canva-text" style="color: rgb(240, 242, 245); font-weight: 400; font-style: normal; font-size: 18px;">Confía:</p>
